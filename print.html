@@ -1,0 +1,1049 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>电脑义务维修中心维修手册</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-2a881858.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-7bdb8017.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">电脑义务维修中心维修手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/liyang8246/pcywwxzx-doc/tree/master" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="电脑维修宝典"><a class="header" href="#电脑维修宝典"><strong>电脑维修宝典</strong></a></h1>
+<h2 id="前言"><a class="header" href="#前言"><em>前言</em></a></h2>
+<p>在当今数字化时代，电脑已经成为我们日常生活和工作中不可或缺的工具。然而，随着使用频率的增加，电脑故障问题也随之而来，给我们的工作和学习带来了诸多困扰。为了帮助大家更好地应对这些常见的电脑故障，我们特别编撰了这本《电脑维修宝典》。</p>
+<p>本宝典汇集了各种电脑故障及其解决办法，从简单的系统问题到复杂的硬件故障，我们力求用简单的方式提供实用的解决方案。无论你是刚买电脑的新同学还是玩了好多年电脑的老油条，都能在这里找到解决问题的办法。希望本宝典能够成为你的得力助手，让你在面对电脑问题时，能够从容应对，快速解决。</p>
+<p>（本宝典会不断完善，如有不妥之处，欢迎指正）</p>
+<h3 id="第一版"><a class="header" href="#第一版">第一版</a></h3>
+<p>本文档由广东第二师范学院计算机学院电脑义务维修中心23级软件部实习干事共同撰写</p>
+<p>何宇杰 刘宇鹏 吴洋 张国立 任晶晶 杨海晨 王佳茵 莫子轩 刘凯乐</p>
+<h3 id="第二版"><a class="header" href="#第二版">第二版</a></h3>
+<p>本文档由广东第二师范学院计算机学院电脑义务维修中心24级技术服务部实习干事共同修改</p>
+<p>陈林 游逸朗 关尧浩 李梓霖 袁俊彬</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="校园网"><a href="#校园网" class="header">校园网</a></h1>
+<h2 id="用户上限"><a class="header" href="#用户上限">用户上限</a></h2>
+<p>在浏览器网址处输入<code>210.38.64.39:8080</code>输入校园网账号、密码与验证码，用户类型选中普通用户,登录后如下图,打开自助营业厅</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/1711717156994-10.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/1711717156994-10.png" alt="img"></span></label></p>
+<p>打开在线用户列表（如下图）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/1711717156994-9.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/1711717156994-9.png" alt="img"></span></label></p>
+<p>将所有用户强制下线,然后按a（iii）操作重新验证即可,在线用户最多为三名。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="黑名单-1"><a href="#黑名单-1" class="header">黑名单</a></h1>
+<h2 id="黑名单"><a class="header" href="#黑名单">黑名单</a></h2>
+<p>前往网络中心寻找相关负责老师进行处理,网络中心位于图书馆二楼平台右手边。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="无法弹出验证界面-1"><a href="#无法弹出验证界面-1" class="header">无法弹出验证界面</a></h1>
+<h2 id="无法弹出验证界面"><a class="header" href="#无法弹出验证界面">无法弹出验证界面</a></h2>
+<p>在浏览器网址处输入http://nac.gdei.edu.cn:8080/byod即可弹出验证界面（如下图）,输入账号密码验证完成即可正常使用网络。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/1711774782843-1.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/1711774782843-1.png" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="网线无用-1"><a href="#网线无用-1" class="header">网线无用</a></h1>
+<h2 id="网线无用"><a class="header" href="#网线无用">网线无用</a></h2>
+<p>电脑右下角打开“网络和Internet”设置,选择更改适配器选项,选中以太网并右键,启用以太网（如下图）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/1711774847557-1.jpeg" alt="img"><span class="img-wrapper"><img src="校园网/assets/1711774847557-1.jpeg" alt="img"></span></label></p>
+<p>如非软件层面问题,请检查网线是否松动,拔出后再次进行插入,检查网线是否有损坏现象,如有损坏及时更换。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="用户名无效-1"><a href="#用户名无效-1" class="header">用户名无效</a></h1>
+<h2 id="用户名无效"><a class="header" href="#用户名无效">用户名无效</a></h2>
+<p>请检查是否用户名输入错误,是否按期缴纳校园网相关费用,未缴纳费用账号将失效无法使用</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="dns解析错误-1"><a href="#dns解析错误-1" class="header">DNS解析错误</a></h1>
+<h2 id="dns解析错误"><a class="header" href="#dns解析错误">DNS解析错误</a></h2>
+<p>电脑右下角打开“网络和Internet”设置,选择更改适配器选项,使用wifi的选中WLAN,使用网线的选中以太网,右键（如下图）打开属性</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/1711774880070-3.jpeg" alt="img"><span class="img-wrapper"><img src="校园网/assets/1711774880070-3.jpeg" alt="img"></span></label></p>
+<p>打开IPv4协议（如下图）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/1711774880070-1.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/1711774880070-1.png" alt="img"></span></label></p>
+<p>选择使用使用下边的DNS服务器地址（如下图）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/1711774880070-2.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/1711774880070-2.png" alt="img"></span></label></p>
+<p>首选填<strong>114.114.114.114</strong>,备用填<strong>8.8.8.8</strong>,然后确定即可。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="刷新系统dns缓存-1"><a href="#刷新系统dns缓存-1" class="header">刷新系统DNS缓存</a></h1>
+<h2 id="刷新系统dns缓存"><a class="header" href="#刷新系统dns缓存">刷新系统DNS缓存</a></h2>
+<p>a. 组合键Win+R打开运行并输入cmd回车</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/run.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/run.png" alt="img"></span></label></p>
+<p>b. 打开命令提示符</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/cmd.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/cmd.png" alt="img"></span></label></p>
+<p>c.输入ipconfig /flushdns并回车</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="校园网/assets/flushdns.png" alt="img"><span class="img-wrapper"><img src="校园网/assets/flushdns.png" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="反正就是没网-1"><a href="#反正就是没网-1" class="header">反正就是没网</a></h1>
+<h2 id="反正就是没网"><a class="header" href="#反正就是没网">反正就是没网</a></h2>
+<p>请自行使用搜索引擎查找问题所在，或寻求专业技术人员（<strong>学长</strong>）帮助。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="磁盘"><a href="#磁盘" class="header">磁盘</a></h1>
+<ol>
+<li>
+<h3 id="c盘n空间不足"><a class="header" href="#c盘n空间不足">C盘n空间不足</a></h3>
+<p>​      利用CCleaner清理磁盘垃圾（以下图片来自https://www.zhihu.com/question/553761875）</p>
+<p>​    1.删去流氓软件以及无用软件：</p>
+<p>​    先打开软件，点击左侧的“工具”，然后选中要卸载的软件，这时候会发现右侧的卸载按钮从灰色变成了蓝色，这时候我们点击“卸载”，就可以卸载选中的软件了</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303291429-26.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303291429-26.png" alt="img"></span></label></p>
+<p>​    2.删去垃圾文件：</p>
+<p>​    （1）.打开软件之后，先点击自定义清理，然后点击分析，寻找垃圾文件</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303286040-23.jpeg" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303286040-23.jpeg" alt="img"></span></label></p>
+<p>​    （2）.分析完成之后，页面上会显示待删除的文件信息，以及可以移除的垃圾大小。这时候我们点击运行清理程序，如果有弹框提示，就点击继续</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303304997-29.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303304997-29.png" alt="img"></span></label></p>
+<p>​    （3）.清理完成之后就会显示出“清理完成”的提示以及移除了多大的内存</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303307122-32.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303307122-32.png" alt="img"></span></label></p>
+<p>​    3.如果还想让电脑更干净那就清理注册表：</p>
+<p>​    （1）.打开CCleaner，里面有个注册表，我们点击它</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303310500-35.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303310500-35.png" alt="img"></span></label></p>
+<p>​    （2）.在注册表清理程序中，默认是选择了所有的选项，这时候我们点击“扫描问题”，然后上面会有个绿色的进度条移动，我们等进度条加载完就好</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303313409-38.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303313409-38.png" alt="img"></span></label></p>
+<p>​    （3）.当扫描完成之后（也就是进度条加载完之后），右下角的“查看选定问题”会变成蓝色，然后我们点击它</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303315124-41.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303315124-41.png" alt="img"></span></label></p>
+<p>​    （4）.这时候会弹出一个是否备份注册表的提示，我们点击“否”，然后点击“修复所有选定的问题”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303317064-44.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303317064-44.png" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303318735-47.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303318735-47.png" alt="img"></span></label></p>
+<p>​    5）.问题修复完成之后，点击“关闭”即可，至此，注册表就清理完毕啦</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303336333-50.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303336333-50.png" alt="img"></span></label></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="磁盘分区"><a href="#磁盘分区" class="header">磁盘分区</a></h1>
+<ol>
+<li>
+<h3 id="磁盘分区-以下内容来自b站up爱玩电脑的小老虎"><a class="header" href="#磁盘分区-以下内容来自b站up爱玩电脑的小老虎">磁盘分区 （以下内容来自B站up爱玩电脑的小老虎）</a></h3>
+<p>1.先查看自己电脑的硬盘容量（例如C盘和D盘），以便找到自己需要分盘的磁盘</p>
+<p>2.在开始菜单点右键，然后再点击磁盘管理（下面图片例子是win10系统，win11也是一样的操作）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303099219-27.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303099219-27.png" alt="img"></span></label></p>
+<p>3.随后我们找到C盘，右键点击C盘，选择压缩卷</p>
+</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303122090-30.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303122090-30.png" alt="img"></span></label></p>
+<p>ps：这个时候可能等待时间有点长，属于正常现象</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303122090-31.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303122090-31.png" alt="img"></span></label></p>
+<p>4。在压缩空间量输入你想压缩的容量（也就是分盘的容量），先用__GB（想分的容量） x1024,把得数填进去，最后点压缩</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303143803-36.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303143803-36.png" alt="img"></span></label></p>
+<p>ps：效果如下图</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303143803-37.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303143803-37.png" alt="img"></span></label></p>
+<p>5.在（未分配）卷上点鼠标右键，点击新建简单卷</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303143803-38.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303143803-38.png" alt="img"></span></label></p>
+<p>6.向导指引出来后，不断点击下一步就行（想确认分盘的参数请慢慢点），最后点击完成</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303143803-39.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303143803-39.png" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303143803-40.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303143803-40.png" alt="img"></span></label></p>
+<p>7.随后我们可以看到C盘后多了个D盘，就完成了</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303143803-41.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303143803-41.png" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="扩盘-1"><a href="#扩盘-1" class="header">扩盘</a></h1>
+<h2 id="扩盘"><a class="header" href="#扩盘">扩盘</a></h2>
+<p>（以下图片来自B站大卫呆科技教室）</p>
+<p>1.在开始菜单上点击右键，然后再点击磁盘管理（下面图片例子是win10系统，win11也是一样的操作）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746891-13.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746891-13.png" alt="img"></span></label></p>
+<p>2.然后就能打开windows自带的磁盘管理页面</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746886-1.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746886-1.png" alt="img"></span></label></p>
+<p>3.找到与C盘相邻的另一个盘（一般是D盘，下面统称D盘）右键它再点击资源管理器</p>
+<p>注意：一定是与C盘相邻的另一个盘</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746887-2.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746887-2.png" alt="img"></span></label></p>
+<p>4.然后就会打开这个盘的文件管理，此时我们需要将在D盘的所有有用的文件全部移动或者拷贝到除了C盘和D盘之外的其他磁盘上（如果没有其他磁盘就利用U盘或者移动硬盘等）</p>
+<p>（没有用的文件可以不用移动或者拷贝，因为等会留在D盘中的所有文件会被删除）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746887-3.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746887-3.png" alt="img"></span></label></p>
+<p>5.准备工作做完之后，我们再次回到磁盘管理，右键D盘，点击删除卷</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746887-4.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746887-4.png" alt="img"></span></label></p>
+<p>6.然后会跳出下面这样的一个提示，如果确认D盘中没有重要的文件之后就点击“是”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746887-5.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746887-5.png" alt="img"></span></label></p>
+<p>7.然后D盘就变成下面的样子，并且此时D盘中的所有文件已经被删除</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746887-6.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746887-6.png" alt="img"></span></label></p>
+<p>8.然后我们右键点击C盘，再点击扩展卷</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746887-7.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746887-7.png" alt="img"></span></label></p>
+<p>9.之后会弹出扩展卷向导，我们点击“下一步”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746888-8.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746888-8.png" alt="img"></span></label></p>
+<p>10.然后就可以开始为你的C盘添加容量啦，看图片可能会有人问为什么上面写的是49999MB，然后未分配那里写的是48.83GB，这是因为单位不同，里面涉及到了单位换算问题，我们不需要去管他</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746888-9.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746888-9.png" alt="img"></span></label></p>
+<p>11.如果你是把刚才D盘的所有内存都加进了C盘，那么接下来的情况你就可以不用看啦（因为你已经完成了将C、D两个盘合在一起了，也就是将C盘扩充了D盘的大小）。如果你只是扩了一部分，那么会出现下面的情况</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746888-10.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746888-10.png" alt="img"></span></label></p>
+<p>12.然后你可以选择不管（就可以打机了，就是会有一部分内存一直用不了而已），也可以选择将这一部分未分配的重新做成D盘，具体操作如下：</p>
+<p>（1）.右键点击未分配，然后点击新建简单卷</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746888-11.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746888-11.png" alt="img"></span></label></p>
+<p>（2）.一样的也是会出现向导，然后无脑点击下一步就可以啦，点完之后D盘就回来啦，然后扩盘就完成啦</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778746888-12.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778746888-12.png" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="不认硬盘"><a href="#不认硬盘" class="header">不认硬盘</a></h1>
+<p>不认硬盘</p>
+<p>一般这种情况出现电脑开机时</p>
+<p>1.检查电脑连接：确保硬盘正确连接到电脑上，并且电源和数据连接良好。如果有必要，可以尝试更换数据线或插头。</p>
+<p>2.检查BIOS设置：在电脑开机时，进入BIOS界面并确认硬盘是否在列表中显示。如果没有，则可以尝试重新扫描硬件或检查SATA模式设置。</p>
+<p>3.使用设备管理器：在Windows中打开设备管理器，在“磁盘驱动器”中查看是否有未知设备或感叹号标志的设备。如果有，可以尝试更新或重新安装驱动程序。</p>
+<p>4.尝试使用其他电脑：将硬盘插入另一台电脑上，查看是否被识别。如果其他电脑可以识别它，则可能是您电脑的问题。如果其他电脑也无法识别它，则可能硬盘本身有问题。</p>
+<p>5.去专业维修店：如果以上方法都没有解决问题，那么您可以考虑去专业的电脑维修店寻求帮助，他们有专业的设备和经验来帮助您解决问题。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="分区备份"><a href="#分区备份" class="header">分区备份</a></h1>
+<p>分区备份</p>
+<p>利用DG来进行操作：</p>
+<p>打开软件，点击“备份分区”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805478-10.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805478-10.png" alt="img"></span></label></p>
+<p>2.然后会跳出下面的页面，点击“选择分区”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-1.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-1.png" alt="img"></span></label></p>
+<p>3.在这里选择你要备份的分区，然后再点确定</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-2.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-2.png" alt="img"></span></label></p>
+<p>4.然后会回到之前的页面，接下来就选择备份类型，然后点击“备份选项”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-3.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-3.png" alt="img"></span></label></p>
+<p>5.然后在这里选择高级的备份方式，在“备份方式”那一栏的三个选项中，把鼠标放在其中一个选项的字上面会出现对应选项的说明（这里就不演示了），所有选择完毕之后，点击右下角“确定”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-4.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-4.png" alt="img"></span></label></p>
+<p>6.确定之后会自动回到之前的页面，然后点击“选择文件路径”，这里是选择你备份的文件放到哪里的意思</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-5.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-5.png" alt="img"></span></label></p>
+<p>7.然后选择你要保存你备份文件的地方，我们一般是选择另一个磁盘里面弄个文件夹放，当然你想放哪里都可以，双击点进去之后，在下面输入你备份文件的名字（一定要输，要不然不能进行下一步），然后点击右下角的“打开”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-6.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-6.png" alt="img"></span></label></p>
+<p>8.弄完之后就变成下面那样，备注那个地方根据个人需求可以写也可以不写，一般都不写，然后就根据图片的走，全部弄完就可以点击“开始”啦</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-7.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-7.png" alt="img"></span></label></p>
+<p>9.由于此次备份操作涉及到系统分区，软件会显示下面的信息。点击“热备份”按钮，软件会立刻对系统分区进行备份（尽量把正在运行的软件都关了）；如果选择“重启到WinPE”（没有PE盘就直接点击热备份），当前系统将自动重启到WinPE环境并继续执行备份操作。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-8.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-8.png" alt="img"></span></label></p>
+<p>10.开始之后就出现下面的情况，现在就等进度条拉满就备份完成啦（个人建议有空就备份一下自己重要的数据哦，毕竟数据如果因为什么意外丢失了那大概率是完全没了，那个时候再后悔就晚啦）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1711778805476-9.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1711778805476-9.png" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="误删文件找回-1"><a href="#误删文件找回-1" class="header">误删文件找回</a></h1>
+<ol>
+<li>
+<h3 id="误删文件找回"><a class="header" href="#误删文件找回">误删文件找回</a></h3>
+<pre><code>  1.如果只是误删了文件,还没进行其他操作,可以在如图界面点击鼠标右键,找到撤销删除.
+</code></pre>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303371292-1.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303371292-1.png" alt="img"></span></label></p>
+<ul>
+<li>2.从回收站恢复:如果你的文件还没被彻底删除,双击回收站,找到你想要的文件,鼠标右键找到还原.即可恢复</li>
+<li>3.在义修软件大礼包中找到 数据恢复-万兴数据恢复-万兴数据恢复8.2版-万兴8.2免安装-Recoverit-Recoverit</li>
+<li><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/Recoverit.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/Recoverit.png" alt="img"></span></label></li>
+<li>选择文件类型后选择我扫描到的文件和需要保留的位置，点击“恢复”就搞定啦</li>
+<li><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/数据恢复.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/数据恢复.png" alt="img"></span></label></li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="关闭bitlocker-1"><a href="#关闭bitlocker-1" class="header">关闭BitLocker</a></h1>
+<ol>
+<li>
+<h3 id="关闭bitlocker"><a class="header" href="#关闭bitlocker">关闭BitLocker</a></h3>
+<pre><code>  1.win7,win10系统：
+
+  （1）[下面以win10为例]  
+
+  先按“win＋r”打开运行，然后在里面输入“control"，输完点“确定”
+</code></pre>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303407730-4.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303407730-4.png" alt="img"></span></label></p>
+<p>（2）.然后就会打开控制面板,然后点击“系统和安全”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303409843-7.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303409843-7.png" alt="img"></span></label></p>
+<p>（3）进去后点击“管理Bitlocker”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303412040-10.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303412040-10.png" alt="img"></span></label></p>
+<p>（4）.然后点击“关闭Bitlocker”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303414383-13.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303414383-13.png" alt="img"></span></label></p>
+<p>（5）.会跳出来这样一个弹窗，我们点击“关闭Bitlocker”，然后等待几分钟（具体时间根据电脑不同而不同，期间是可以正常使用电脑的）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303416347-16.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303416347-16.png" alt="img"></span></label></p>
+<p>（6）.最后显示这样就表示你已经关闭Bitlocker啦</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303418496-19.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303418496-19.png" alt="img"></span></label></p>
+<p>2.win11系统：</p>
+<p>(1）.首先点击任务栏中的win图标，然后点击“设置”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303420482-22.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303420482-22.png" alt="img"></span></label></p>
+<p>（2）.然后在搜索栏那边输入“加密”，再点击下面的“设备加密设置”（也可以直接输入“设备加密设置”）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303422896-25.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303422896-25.png" alt="img"></span></label></p>
+<p>（3）.然后将开关关闭</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303424918-28.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303424918-28.png" alt="img"></span></label></p>
+<p>（4）.然后会跳出这个页面，点击“关闭”即可（期间电脑可以正常使用）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="磁盘/assets/1712303403695-1.png" alt="img"><span class="img-wrapper"><img src="磁盘/assets/1712303403695-1.png" alt="img"></span></label></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="无法开机"><a href="#无法开机" class="header">无法开机</a></h1>
+<p><strong>完全黑屏</strong></p>
+<p>3.2 <strong>显卡、内存接触不良造成电脑开机黑屏</strong>**.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image002.jpg" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image002.jpg" alt="img"></span></label></p>
+<p>这种问题出现得比较多.如果显示接触不良很容易出现黑屏,有些还会出现花屏等等故障,这时可打开机箱,然后用十字镙丝刀取下显卡,最好用橡皮擦擦试一下那个“金手指”部分,再重新插入试试;也有可能是内存松动,解决方法同样,擦试后重新插入.也可以更换一根内存插槽测试.</p>
+<p>3.3 <strong>显示器损坏或接触不良造成电脑开机黑屏</strong>**.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image004.jpg" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image004.jpg" alt="img"></span></label></p>
+<p>如果显示器与电脑的连接松动也同样会出现电脑开机黑屏现象,所以检查一下连线是否接牢,还有一种情况就是显示器损坏,其实你的电脑是正常工作的,只是你无法显示,这时你可以按一下电脑键盘的【NumLock】或者【CapsLock】键,看看那个灯会不会有反应,如果有反应,基本可以确定电脑主板是正常的,说明显示器损坏或接触不良.</p>
+<p>3.4 <strong>电源有问题造成电脑开机黑屏</strong>**.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image006.jpg" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image006.jpg" alt="img"></span></label></p>
+<p>大多出现电脑黑屏不显示是因为电脑电源有问题,可以看一下电源后面的风扇有没有转,如果没转,检测有没有电输出过来(检查电源插板等等),确定有电输入,那么基本可以判断电源有问题,有些是转一下马上停,也有些是正常转的,能转不一定就是好的,有条件可以用另一台电脑电源替换测试一下.</p>
+<p>3.5 <strong>CPU<strong><strong>损坏造成电脑开机黑屏不显示</strong></strong>.</strong></p>
+<p>如果CPU出现问题那么电脑一定是无法显示的,CPU出现问题概率比较低,最可能的原因是CPU风扇坏了导致CPU温度过高而烧掉,首先打开机箱,检测一下CPU风扇有没有转,如果没转就有点麻烦了,估计CPU烧坏了,只能更换CPU;如果风扇是转的可以用手摸摸CPU(注意在摸CPU之前请在金属类的物品上先摸一下放掉手上的静电),如果是凉的说明CPU没有工作,也可以说明CPU有问题.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="电源灯闪一下又灭不能启动-1"><a href="#电源灯闪一下又灭不能启动-1" class="header">电源灯闪一下又灭不能启动</a></h1>
+<h2 id="电源灯闪一下又灭不能启动"><a class="header" href="#电源灯闪一下又灭不能启动">电源灯闪一下又灭不能启动</a></h2>
+<p>1、当主机处于待机状态时，电源指示灯也会是一闪一闪的，这时，一般通过按键盘或者动鼠标来唤醒电脑，如果按键盘和动鼠标无法唤醒主机，需要按一下电源开关键，这时即可唤醒主机，通过此次操作依然无法唤醒主机时，尝试第二个步骤。</p>
+<p>2、可能是由于系统无响应，假死现象造成的，此时，你需要按下电源开关按钮长达十秒，使主机彻底关机后，再尝试重新开机，在查看故障是否解决。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/kaiji.png" alt="img"><span class="img-wrapper"><img src="无法开机/assets/kaiji.png" alt="img"></span></label></p>
+<p>3、故障问题依旧存在，可能是由于电源电压不稳定导致的，观察其他电器是否可以正常工作。排除掉电压原因。</p>
+<p>4、内存松动引起的主机无法开机，切断主机电源，尝试将主机内存条拔下来，用橡皮擦拭金手指，复装之后，开机，观察故障是否解决。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/neicun.png" alt="img"><span class="img-wrapper"><img src="无法开机/assets/neicun.png" alt="img"></span></label></p>
+<p>5、主板静电引起的无法开机，此时，可以尝试将主板主板cmos电池抠除，用金属物件短cmos电池引脚，放电之后，复装电源，开机尝试故障是否解决。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/dianchi.png" alt="img"><span class="img-wrapper"><img src="无法开机/assets/dianchi.png" alt="img"></span></label></p>
+<p>6、如果操作完上述步骤仍然无法解决问题，建议交由专业人员处理。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="能显示logo进不去系统"><a href="#能显示logo进不去系统" class="header">能显示logo进不去系统</a></h1>
+<p><strong>能显示<strong><strong>logo</strong></strong>进不去系统</strong></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image002.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image002.gif" alt="img"></span></label></p>
+<p><strong>一</strong>**.<strong><strong>外部连接的设备接触不良导致的开机故障问题</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image004.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image004.gif" alt="img"></span></label></p>
+<p>尝试把所有外部USB设备拔取下来,然后逐个检查外部设备(包括键盘、鼠标、U盘、音响、摄像头、耳机等等).</p>
+<p><strong>二</strong>**.**<strong>硬盘的接触不良导致的开机故障问题。</strong></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image006.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image006.gif" alt="img"></span></label></p>
+<p>尝试拆开机箱盖(笔记本后盖),把硬盘线都拔掉,再重新启动电脑,如果能通过logo画面,说明是硬盘或者硬盘数据线所导致的问题,更换一条硬盘数据线测试即可.
+<strong>检测方法：用PE系统启动，利用PE系统中的Disk Genius进行硬盘检测</strong></p>
+<p><strong>三</strong>**.<strong><strong>内存条的接触不良引起的开机故障问题</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image008.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image008.gif" alt="img"></span></label></p>
+<p>这种情况,一般是出现在有多根内存条的电脑上,需要拆开机箱盖(笔记本后盖),然后插拔所有内存,并逐个把单根内存插好,交替尝试进行开机检测.如果说有那一根内存条检测不通过,用橡皮胶把内存条金手指擦拭干净,或者更换为一根全新的内存条即可.</p>
+<p><strong>四</strong>**.<strong><strong>主板</strong></strong>BIOS<strong><strong>数据出错导致</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image010.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image010.gif" alt="img"></span></label></p>
+<p>尝试进入主板BIOS,如果可以进入到主板BIOS,我们直接初始化BIOS设置信息,再按F10保存退出重启电脑;在进不了主板BIOS设置的情况下,我们可以将主板的纽扣电池取下来,再放回原位,也可以将BIOS设置恢复默认设置,完成初始化BIOS设置信息.</p>
+<p>开机进BIOS</p>
+<p><strong>一</strong>**.<strong><strong>没有合适的启动项</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image012.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image012.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image014.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image014.gif" alt="img"></span></label></p>
+<p>看主板BIOS界面的Boot菜单页面是否能找到硬盘,如果能找到说明bios第一启动项设置错误,直接把first 或者#1里面设置成你的硬盘,F10保存重启,即可;如果找不到说明硬盘没有读取到,需要关机,拆开机箱盖(笔记本后盖),检查硬盘连接线,排查硬盘线是否正常.</p>
+<p>(注:如果上述办法没能解决问题,很大可能是硬盘出现损坏，需要更换硬盘调试.)</p>
+<p><strong>二</strong>**.<strong><strong>主板电池没电失效导致</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image016.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image016.gif" alt="img"></span></label></p>
+<p>可在BIOS界面查看系统时间是否准确,如果不准确,则可判断是主板电池失效,导致电脑调用BIOS默认参数,如果与本机硬件环境不符,则无法正常启动电脑.可购置主板电池进行替换(或拆下BIOS电池等待一分钟再装回去开机),再开机进入BIOS界面,并重新设置正确的参数,最后按F10保存退出重启.</p>
+<p><strong>三</strong>**.<strong><strong>系统文件被修改导致</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image018.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image018.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image020.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image020.gif" alt="img"></span></label></p>
+<p>开机进入BIOS界面,然后按 F9 键恢复BIOS默认设置,按F10 保存退出,再重启电脑确认是否可正常进系统.</p>
+<p>键盘轴损坏导致</p>
+<p>有可能键位损坏导致某按键自动触发进入BIOS,更换键盘再进行检测即可.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="进系统蓝屏-1"><a href="#进系统蓝屏-1" class="header">进系统蓝屏</a></h1>
+<h2 id="进系统蓝屏"><a class="header" href="#进系统蓝屏">进系统蓝屏</a></h2>
+<p><strong>一</strong>**.<strong><strong>驱动程序导致蓝屏</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image002-1712303749097-1.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image002-1712303749097-1.gif" alt="img"></span></label></p>
+<p>有可能是驱动程序不兼容,安装未知程序会导致蓝屏.先根据蓝屏代码来搜索下,此代码具体是因为什么引起的;然后重启电脑按F8,选择进入安全模式把出现错误的驱动给卸载掉;再根据找出驱动出现问题的设备,重新安装驱动.(驱动没必要追求最新)(或者使用Windows系统还原功能，直接将系统恢复至上一个还原点进行检测)</p>
+<p><strong>二</strong>**.BIOS<strong><strong>硬盘兼容出错导致蓝屏</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image004-1712303749097-2.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image004-1712303749097-2.gif" alt="img"></span></label></p>
+<p>在这种情况下,常见的<a href="https://www.zhihu.com/search?q=蓝屏代码&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra={&quot;sourceType&quot;%3A&quot;answer&quot;%2C&quot;sourceId&quot;%3A1833160713}">蓝屏代码</a>为0x0000007B和0x000000A5.要重新启动计算机,快速并间歇地按热键进入BIOS,找到SATA Configuration(SATA配置),如果要安装XP,则更改为IDE,如果没有IDE模式,则更换其他系统.</p>
+<p><strong>三</strong>**.<strong><strong>系统文件丢失或损坏</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image006-1712303749097-3.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image006-1712303749097-3.gif" alt="img"></span></label></p>
+<p>这种情况需要重装系统了,推荐pe重装比较便捷.</p>
+<p><strong>四</strong>**.<strong><strong>硬件问题引起</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image008-1712303749097-5.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image008-1712303749097-5.gif" alt="img"></span></label></p>
+<p>有时候是内存条接触不良导致,需要清理机箱内灰尘,拔下内存条,用橡皮擦拭金手指,再重新插紧.或者换一条新的内存条.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image010-1712303749097-7.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image010-1712303749097-7.gif" alt="img"></span></label></p>
+<p>有可能是硬盘出现了故障,首先检测硬盘坏道情况,如果硬盘出现大量坏道,建议备份数据更换硬盘.如果出现坏道比较少,建议备份数据,重新格式化分区磁盘.(HD Tune这款软件可用于检测硬盘的健康状况)</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image012-1712303749097-4.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image012-1712303749097-4.gif" alt="img"></span></label></p>
+<p>还有病毒木马导致的电脑蓝屏的情况,推荐使用Process Explorer强制终止恶意进程(微软官方推荐的进程监视工具).</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image014-1712303749097-6.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image014-1712303749097-6.gif" alt="img"></span></label></p>
+<p>有可能是因为电脑温度过高导致蓝屏,如果出现电脑蓝屏而电脑内部温度很高,那么很可能就是散热不良导致电脑蓝屏,可以拆机检查是电脑的哪一部分造成.如果是 cpu 或显卡温度过高,那么就要考虑更换CPU风扇或显卡风扇;如果是硬盘温度过高,那么就有可能是硬盘出现故障.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image016-1712303749097-8.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image016-1712303749097-8.gif" alt="img"></span></label></p>
+<p>还有其它很多原因比如电脑电源出现故障,导致供电不正常,还有的是电脑硬件不兼容,这种情况多数出现在组装电脑上,建议购买组装电脑去选择搭配均衡,兼容性好的硬件搭配.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="锁屏界面进不去系统"><a href="#锁屏界面进不去系统" class="header">锁屏界面进不去系统</a></h1>
+<p>在锁屏界面进不去系统</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image002-1712303804129-1.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image002-1712303804129-1.gif" alt="img"></span></label></p>
+<p><strong>一</strong>**.<strong><strong>电脑卡住导致</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image004-1712303804129-2.jpg" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image004-1712303804129-2.jpg" alt="img"></span></label></p>
+<p>同时按下ctrl、alt、delete三键,然后按esc退出当前页面.</p>
+<p><strong>二</strong>**.<strong><strong>电脑组策略出现问题</strong></strong>.**</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image006-1712303804129-3.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image006-1712303804129-3.gif" alt="img"></span></label></p>
+<p>尝试以安全模式启动,在选项界面依次点击“疑难解答”“高级选项”“启动设置”“重启”,开机后键盘上按F4,即可进入安全模式.在安全模式可以进入后,重复第一步,重新来到选项界面.选择“继续,退出并继续使用windows10(以win10为例)”.之后电脑可以正常弹出密码登录界面并进入系统.(此时虽然电脑可以正常使用，下一次正常开机或者重启后，还是会卡死在开机屏保，无法弹出密码登录界面)</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image008-1712303804129-5.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image008-1712303804129-5.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image010-1712303804129-4.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image010-1712303804129-4.gif" alt="img"></span></label></p>
+<p>进入系统重置组策略,首先必须清理组策略设置文件,这些文件是隐藏的,需要先显示隐藏文件,在资源管理器Q中点击“查看”菜单,选择“选项”.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image012-1712303804129-6.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image012-1712303804129-6.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image014-1712303804129-7.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image014-1712303804129-7.gif" alt="img"></span></label></p>
+<p>将隐藏的文件显示.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image016-1712303804130-8.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image016-1712303804130-8.gif" alt="img"></span></label></p>
+<p>打开C:Windows\System32\GroupPolicy,把里面的所有内容全部删除.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image018-1712303804130-9.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image018-1712303804130-9.gif" alt="img"></span></label></p>
+<p>按Win+R打开运行,输入gpupdate /force,点击确定,就会刷新组策略.(注意要先显示隐藏文件，才能看到GroupPolicy文件夹)</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image020-1712303804130-10.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image020-1712303804130-10.gif" alt="img"></span></label></p>
+<p>电脑左下角搜索框搜索“命令提示符”,右键选择“以管理员身份运行”,在命令提示框输入 sfc/scannow 扫描结束后,出现提示“Windows 资源保护找到了损坏文件,但其中有一些文件无法修复”.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image022.jpg" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image022.jpg" alt="img"></span></label></p>
+<p>此时我们需要用到Dism指令进行修复.还是在命令提示框中输入上述指令,如果,上述命令输入完成后,出现如下图片所示情况,继续输入第二个命令,再输入第三个指令.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image024.jpg" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image024.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image026.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image026.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image028.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image028.gif" alt="img"></span></label></p>
+<p>如果没出现上图操作成功情况,需要按下win+R打开运行,输入:services.msc</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image030.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image030.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image032.gif" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image032.gif" alt="img"></span></label></p>
+<p>找到Windows Modules Installer,右击它,点击启动.启动服务后重新尝试是否可以正常运行sfcX /scannow命令,若不行则再次打开运行(win+R),输入: regedit 点击确定打开注册表;</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="无法开机/assets/clip_image034.jpg" alt="img"><span class="img-wrapper"><img src="无法开机/assets/clip_image034.jpg" alt="img"></span></label></p>
+<p>展开HKEY_ LOCAL_ MACHINE\System\CurrentControlSet\Control,在Control右侧找到RegistrySizeLimit.如果没有的话,在右侧空白区右键点击新建一DWORD(32位-值), 命名为RegistrySizeLimit;双击打开“RegistrySizeLimit“,点击“十六进制”,然后在左侧输入: ffffff (8个f就对了不要多也不要少),点击确定保存设置.设置完成后重启电脑,在命令提示框输入 sfc/scannow 查看问题是否解决.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="常见bios操作"><a href="#常见bios操作" class="header">常见BIOS操作</a></h1>
+<p><strong>进出****BIOS</strong></p>
+<ol>
+<li>在开机或重启（图标亮起时）按对应按键（如下图）</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image002.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image002.jpg" alt="img"></span></label></p>
+<p>a.  之后按电脑提示打开BIOS系统</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image004.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image004.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image006.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image006.jpg" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="调整语言"><a href="#调整语言" class="header">调整语言</a></h1>
+<p><strong>调整语言</strong></p>
+<ol>
+<li>进入BIOS,找到语言，通过鼠标或光标进行改动后保存</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image002-1712303839956-1.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image002-1712303839956-1.jpg" alt="img"></span></label><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/image-20240405155726338.png" alt="image-20240405155726338"><span class="img-wrapper"><img src="常见BIOS操作/assets/image-20240405155726338.png" alt="image-20240405155726338"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="恢复默认设置"><a href="#恢复默认设置" class="header">恢复默认设置</a></h1>
+<p><strong>恢复默认设置</strong></p>
+<ol>
+<li>进入BIOS，在安全中找到对应选项，然后保存</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image002-1712303864871-1.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image002-1712303864871-1.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image004-1712303864871-2.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image004-1712303864871-2.jpg" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="更改启动顺序"><a href="#更改启动顺序" class="header">更改启动顺序</a></h1>
+<p><strong>更改启动顺序</strong></p>
+<ol>
+<li>进入BIOS，在启动选项中找到对应选项，移动鼠标或光标进行调整，然后保存</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image002-1712303878975-1.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image002-1712303878975-1.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image004-1712303878975-2.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image004-1712303878975-2.jpg" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="开关安全启动"><a href="#开关安全启动" class="header">开关安全启动</a></h1>
+<p><strong>开关安全启动</strong></p>
+<p>进入BIOS，在启动选项中找到对应选项，选择启用，然后保存</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image002-1712303886803-1.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image002-1712303886803-1.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="常见BIOS操作/assets/clip_image004-1712303886803-2.jpg" alt="img"><span class="img-wrapper"><img src="常见BIOS操作/assets/clip_image004-1712303886803-2.jpg" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="系统"><a href="#系统" class="header">系统</a></h1>
+<p><strong>蓝屏</strong>**/**<strong>死机</strong></p>
+<p>5.1.1 <strong>蓝屏：</strong></p>
+<p>a.  Windows蓝屏情况是很常见的，当电脑进入蓝屏界面，我们通常可以在其界面查找到蓝屏代码。通过页面提示以及代码，我们可以大致定位问题根源。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image002.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image002.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image004.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image004.gif" alt="img"></span></label></p>
+<p>b.  蓝屏问题通常集中在硬软件或驱动的不兼容、病毒等。在下文中提供了一些对应情况的常规解决方案。</p>
+<p>c.  1.重启：有时只是某个程序或驱动程序一时犯错, 重启后他们会改过自新</p>
+<p>d.  2.新硬件：首先, 应该检查新硬件是否插牢, 这个被许多人忽视的问题往往会引发许多莫名其妙的故障. 如果确认没有问题, 将其拔下, 然后换个插槽试试, 并安装最新的驱动程序. 同时还应对照微软网站的硬件兼容类别检查一下硬件是否与操作系统兼容. 如果你的硬件没有在表中, 那么就得到硬件厂商网站进行查询, 或者拨打他们的咨询电话.</p>
+<p>e.  对于硬件方面的故障，也可以考虑下载对应软件进行烧机测试排除。能导致频繁蓝屏的硬件故障一般是CPU、内存、硬盘。</p>
+<p>f.  3.新驱动和新服务：如果刚安装完某个硬件的新驱动, 或安装了某个软件, 而它又在系统服务中添加了相应项目(比如:杀毒软件、CPU降温软件、防火墙软件等), 在重启或使用中出现了蓝屏故障, 请到安全模式来卸载或禁用它们.</p>
+<p>g.  4.检查病毒：比如冲击波和振荡波等病毒有时会导致Windows蓝屏死机, 因此查杀病毒必不可少. 同时一些木马间谍软件也会引发蓝屏, 所以最好再用相关工具进行扫描检查.</p>
+<p>h.  5.检查BIOS和硬件兼容性：对于新装的电脑经常出现蓝屏问题, 应该检查并升级BIOS到最新版本, 同时关闭其中的内存相关项, 比如:缓存和映射. 另外 还应该对照微软的硬件兼容列表检查自己的硬件. 还有就是, 如果主板BIOS无法支持大容量硬盘也会导致蓝屏, 需要对其进行升级.</p>
+<p>i.   6.电脑自查系统文件：以管理员身份启动cmd，输入sfc/scannow，令电脑自我检测系统文件是否异常。一般检测到问题后会进行修复，若无法修复，则考虑百度错误代码、使用Windows安装光盘对系统进行修复安装或重装（下策）。</p>
+<p>j.   7.检查系统日志：在开始–&gt;菜单中输入:EventVwr.msc, 回车出现“事件查看器“, 注意检查其中的“系统日志“和“应用程序日志“中表明“错误“的项.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image006.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image006.gif" alt="img"></span></label></p>
+<p>k.  8上网问（Baidu）：进入微软帮助与支持网站，搜索电脑对应停机码，如果没有合适信息，可以选择“英文知识库”再搜索。</p>
+<p>l.   9.最后一次正确的配置： 重启系统, 在出现启动菜单时按下F8键就会出现高级启动选项菜单, 接着选择“最后一次正确配置“。面对系统软件或驱动更新引起的蓝屏，这种方法快捷有效。</p>
+<p>m. 10.启动修复：</p>
+<p>n.  电脑无法正常开机时，强制开机三次后再次开机，电脑会进入修复界面，可以选择相应选项修理。</p>
+<p>o.</p>
+<p>p.</p>
+<p>q.  为面对不同的蓝屏情况，以下整理了一些常见代码及其原因（Ctrl+f一键查找），实际处理问题时建议多谨慎考虑或百度</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>代码</th><th>原因</th><th>解决方案</th></tr>
+</thead>
+<tbody>
+<tr><td>0x0000000A:IRQL_NOT_LESS_OR_EQUAL</td><td>1.主要是由于安装了有缺陷或不兼容的硬件（BIOS)、驱动程序、软件产生。  2.当系统升级Windows到一个新版本时，由于设备驱动、系统服务、病毒扫描或备份工具与新版本不兼容产生。</td><td>上述2、3、5、8、9方案尝试排除</td></tr>
+<tr><td>0x00000012:TRAP_CAUSE_UNKNOWN</td><td>未知</td><td>既然微软都帮不上忙, 就得靠自己了, 请仔细回想这个错误是什么时候出现的;  第一次发生时你对系统做了哪些操作;  发生时正在进行什么操作. 从这些信息中找出可能的原因,  从而选择相应解决方案尝试排除</td></tr>
+<tr><td>0x0000001A:MEMORY_MANAGEMENT</td><td>这个内存管理错误往往是由硬件引起的,  比如: 新安装的硬件、内存本身有问题等.</td><td>如果是在安装Windows时出现, 有可能是由于你的电脑达不到安装Windows的最小内存和磁盘要求.</td></tr>
+<tr><td>0x0000001E:KMODE_EXCEPTION_NOT_HANDLED</td><td>Windows内核检查到一个非法或者未知的进程指令，这个停机码一般是由问题的内存或是与前面0x0000000A相似的原因造成的.</td><td>1.     硬件兼容有问题:请对照前面提到的最新硬件兼容性列表, 查看所有硬件是否包含在该列表中.  2.     有问题的设备驱动、系统服务或内存冲突和中断冲突: 如果在蓝屏信息中出现了驱动程序的名字, 请试着在安装模式或者故障恢复控制台中禁用或删除驱动程序, 并禁用所有刚安装的驱动和软件. 如果错误出现在系统启动过程中, 请进入安全模式, 将蓝屏信息中所标明的文件重命名或者删除.  3.     如果错误信息中明确指出Win32K.sys: 很有可能是第三方远程控制软件造成的, 需要从故障恢复控制台中将对该软件的服务关闭.  4.     在安装Windows后第一次重启时出现:最大嫌疑可能时系统分区的磁盘空间不足或BIOS兼容有问题.  5.     如果是在关闭某个软件时出现的:很有可能是软件本身存在设计缺陷, 请升级或卸载它.</td></tr>
+<tr><td>0x00000023:FAT_FILE_SYSTEM</td><td>0x00000023通常发生在读写FAT16或者FAT32文件系统的系统分区时, 而0x00000024则是由于NTFS.sys文件出现错误(这个驱动文件的作用是容许系统读写使用 .(NTFS文件系统的磁盘). 这两个蓝屏错误很有可能是磁盘本身存在物理损坏, 或是中断要求封包(IRP)损坏而导致的. 其他原因还包括:硬盘磁盘碎片过多; 文件读写操作过于频繁, 并且数据量非常大或者是由于一些磁盘镜像软件或杀毒软件引起的.</td><td>第一步:首先打开命令行提示符, 运行“Chkdsk  /r“(注:不是CHKDISK, 感觉象这个, 但是它们所指的内容是不一样的)命令检查并修复硬盘错误, 如果报告存在坏道(Bad Track), 请使用硬盘厂商提供的检查工具进行检查和修复.  第二步:接着禁用所有即使扫描文件的软件,  比如:杀毒软件、防火墙或备份工具.  第三步:右击C:\winnt\system32\drivers\fastfat.sys文件并选择“属性“, 查看其版本是否与当前系统所使用的Windows版本相符合.(注:如果是XP, 应该是C:\windows\system32\drivers\fastfat.sys)  第四步:安装最新的主板驱动程序, 特别IDE驱动. 如果你的光驱、可移动存储器也提供有驱动程序,  最好将它们升级至最新版.</td></tr>
+<tr><td>0x00000027:RDR_FILE_SYSTEM</td><td>这个错误产生的原因很难判断,  不过Windows内存管理出了问题很可能会导致这个停机码的出现.</td><td>如果是内存管理的缘故, 通常增加内存会解决问题.</td></tr>
+<tr><td>0x0000002EATA_BUS_ERROR</td><td>系统内存存储器奇偶校验产生错误,  通常是因为有缺陷的内存(包括物理内存、二级缓存或者显卡显存)时设备驱动程序访问不存在的内存地址等原因引起的.  另外, 硬盘被病毒或者其他问题所损伤,  以出现这个停机码.</td><td>1.     检查病毒  2.     使用“chkdsk /r“命令检查所有磁盘分区.  3.     用Memtest86等内存测试软件检查内存.  4.     检查硬件是否正确安装, 比如:是否牢固、金手指是否有污渍.</td></tr>
+<tr><td>0x00000035:NO_MORE_IRP_STACK_LOCATIONS</td><td>从字面上理解, 应该是驱动程序或某些软件出现堆栈问题.  其实这个故障的真正原因应该是驱动程序本身存在问题,  或是内存有质量问题.</td><td>请使用前面介绍的常规解决方案中与驱动程序和内存相关的方案进行排除.</td></tr>
+<tr><td>0x0000003F:NO_MORE_SYSTEM_PTES</td><td>一个与系统内存管理相关的错误,  比如:由于执行了大量的输入/输出操作, 造成内存管理出现问题: 有缺陷的驱动程序不正确地使用内存资源;  某个应用程序(比如:备份软件)被分配了大量的内核内存等.</td><td>卸载所有最新安装的软件(特别是哪些增强磁盘性能的应用程序和杀毒软件)和驱动程序.</td></tr>
+<tr><td>0x00000044:MULTIPLE_IRP_COMPLIETE_REQUESTS</td><td>通常是由硬件驱动程序引起的.</td><td>卸载最近安装的驱动程序</td></tr>
+<tr><td>0x00000050:PAGE_FAULT_IN_NONPAGED+AREA</td><td>有问题的内存(包括物理内存、二级缓存、显存)、不兼容的软件(主要是远程控制和杀毒软件)、损坏的NTFS卷以及有问题的硬件(比如: PCI插卡本身已损坏)等都会引发这个错误.</td><td>请使用前面介绍的常规解决方案中与内存、软件、硬件、硬盘等相关的方案进行排除.</td></tr>
+<tr><td>0x00000051:REGISTRY_ERROR</td><td>这个停机码说明注册表或系统配置管理器出现错误,  由于硬盘本身有物理损坏或文件系统存在问题,  从而造成在读取注册文件时出现输入/输出错误.</td><td>使用“chkdsk  /r“检查并修复磁盘错误.</td></tr>
+<tr><td>0x00000058:FTDISK_INTERNAL_ERROR</td><td>说明在容错集的主驱动发生错误.</td><td>首先尝试重启电脑看是否能解决问题,  如果不行, 则尝试“最后一次正确配置“进行解决.</td></tr>
+<tr><td>0x0000005E:CRITICAL_SERVICE_FAILED</td><td>某个非常重要的系统服务启动识别造成的.</td><td>如果是在安装了某个新硬件后出新的,  可以先移除该硬件, 并通过网上列表检查它是否与Windows  2K/XP兼容, 接着启动电脑, 如果蓝屏还是出现, 请使用“最后一次正确配置“来启动Windows, 如果这样还是失败, 建议进行修复安装或是重装.</td></tr>
+<tr><td>0x0000006F:SESSION3_INITIALIZATION-FAILED</td><td>这个错误通常出现在Windows启动时, 一般是由有问题的驱动程序或损坏的系统文件引起的.</td><td>对应方法无效时尝试Windows 安装光盘对系统进行修复</td></tr>
+<tr><td>0x00000076ROCESS_HAS_LOCKED_PAGES</td><td>通常是因为某个驱动程序在完成了一次输入/输出操作后, 没有正确释放所占有的内存</td><td>第一步:点击开始–&gt;运行:regedt32, 找到[HKLM\SYSTEM\Currentcontrol  set\control\session manager\memory management], 在右侧新建双字节值“TrackLockedPages“,  值为1. 这样Windows便会在错误再次出现时跟踪到是哪个驱动程序的问题.第二步:如果再次出现蓝屏, 那么错误信息会变成:STOP:0x0000000CB(0xY,0xY,0xY,0xY)DRIVER_LEFT_LOCKED_PAGES_IN_PROCESS其中第四个“0xY“会显示为问题驱动程序的名字,  接着对其进行更新或删除.第三步:进入注册表, 删除添加的“TrackLockedPages“.</td></tr>
+<tr><td>0x00000077:KERNEL_STACK_INPAGE_ERROR</td><td>说明需要使用的内核数据没有在虚拟内存或物理内存中找到. 这个错误常常是磁盘有问题,  相应数据损坏或受到病毒侵蚀.</td><td>使用杀毒软件扫描系统; 使用“chkdsk  /r“命令检查并修复磁盘错误, 如不行则使用磁盘厂商提供的工具检查修复.</td></tr>
+<tr><td>0x0000007A:KERNEL_DATA_INPAGE_ERROR</td><td>这个错误往往是虚拟内存中的内核数据无法读入内存造成的. 原因可能是虚拟内存页面文件中存在坏簇病毒、磁盘控制器出错、内存有问题.</td><td>首先用升级为最新病毒库杀毒软件查杀病毒,  如果信息中还有0xC000009C或0xC000016A代码, 那么表示是坏簇造成的, 并且系统的磁盘检测工具无法自动修复,  这时要进入“故障恢复控制台“, 用“chkdsk  /r“命令进行手动修复.</td></tr>
+<tr><td>0x0000007B:INACESSIBLE_BOOT_DEVICE</td><td>Windows在启动过程中无法访问系统分区或启动卷. 一般发生在更换主板后第一次启动时, 主要是因为新主板和旧主板的IDE控制器使用了不同芯片组造成的. 有时也可能是病毒或硬盘损伤所引起的.</td><td>一般只要用安装光盘启动电脑,  然后执行修复安装即可解决问题.  对于病毒则可使用DOS版的杀毒软件进行查杀(有kv2005DOS版下载). 如果是硬盘本身存在问题, 请将其安装到其他电脑中, 然后使用“chkdsk  /r“来检查并修复磁盘错误.</td></tr>
+<tr><td>0x0000007E:SYSTEM_THREAD_EXCEPTION_NOT_HANDLED</td><td>系统进程产生错误, 但Windows错误处理器无法捕获. 其产生原因很多, 包括:硬件兼容性、有问题的驱动程序或系统服务、 或者是某些软件.</td><td>请使用“事件查看器“来获取更多的信息, 从中发现错误根源.(发现好像不是解决哦, 看来这里大家要自力更生了!)</td></tr>
+<tr><td>0x0000007F:UNEXPECTED_KERNEL_MOED_TRAP</td><td>一般是由于有问题的硬件(比如:内存)或某些软件引起的. 有时超频也会产生这个错误.</td><td>用检测软件(比如:Memtest86)检查内存, 如果进行了超频, 请取消超频. 将PCI硬件插卡从主板插槽拔下来,  或更换插槽. 另外, 有些主板(比如:nForce2主板)在进行超频后, 南桥芯片过热也会导致蓝屏,  此时为该芯片单独增加散热片往往可以有效解决问题.</td></tr>
+<tr><td>0x00000080:NMI_HARDWARE_FAILURE</td><td>通常是由于硬件引起的.(似乎蓝屏与硬件错误有不解之缘)</td><td>如果最近安装了新硬件, 请将其移除, 然后试试更换插槽和安装最新的驱动程序,  如果升级了驱动程序, 请恢复后原来的版本; 检查内存金手指是否有污染和损坏;  扫描病毒; 运行“chkdsk  /r“检查并修复磁盘错误; 检查所有硬件插卡已经插牢.  如果以上尝试都无效果, 就得找专业的电脑维修公司请求帮助了.</td></tr>
+<tr><td>0x0000008E:KERNEL_MODE_EXCEPTION_NOT_HANDLED</td><td>内核级应用程序产生了错误,  但Windows错误处理器没有捕获. 通常是硬件兼容性错误.</td><td>升级驱动程序或升级BIOS.</td></tr>
+<tr><td>0x0000009C:MACHINE_CHECK_EXCEPTION</td><td>通常是硬件引起的. 一般是因为超频或是硬件存在问题(内存、CPU、总线、电  源).</td><td>如果进行了超频, 请降下CPU原来频率, 检查硬件.</td></tr>
+<tr><td>0x0000009FRIVER_POWER_STATE_FAILURE</td><td>往往与电源有关系, 常常发生在与电源相关的操作,  比如:关机、待机或休睡.</td><td>重装系统, 如果不能解决, 请更换电源.</td></tr>
+<tr><td>0x000000A5:ACPI_BIOS_ERROR</td><td>通常是因为主板BIOS不能全面支持ACPI规范.</td><td>如果没有相应BIOS升级, 那么可在安装Windows 2K/XP时, 当出现“press F6 if  you need to install a third-party SCSI or RAID driver“提示时, 按下F7键, 这样Windows便会自动禁止安装ACPI HAL, 而安装 Standard PC HAL.</td></tr>
+<tr><td>0x000000B4:VIDEO_DRIVER_INIT_FAILURE</td><td>这个停止信息表示Windows因为不能启动显卡驱动, 从而无法进入图形界面. 通常是显卡的问题, 或者是存在与显卡的硬件冲突(比如:与并行或串行端口冲突).</td><td>进入安全模式查看问题是否解决,  如果可以, 请升级最新的显卡驱动程序,  如果还不行, 则很可能是显卡与并行端口存在冲突,  需要在安全模式按下WIN+break组合键打开“系统属性“, 在硬件–&gt;设备管理器中找到并双击连接打印的LPT1端口的选项, 在“资源“选项卡中取消“使用自动配置“的勾选, 然后将“输入/输出范围“的“03BC“改为“0378“.</td></tr>
+<tr><td>0x000000BE:ATTEMPTED_WRITE_TO_READONLY_MEMORY</td><td>某个驱动程序试图向只读内存写入数据造成的.  通常是在安装了新的驱动程序,  系统服务或升级了设备的固件程序后.</td><td>如果在错误信息中包含有驱动程序或者服务文件名称,  请根据这个信息将新安装的驱动程序或软件卸载或禁用.</td></tr>
+<tr><td>0x000000C2:BAD_POOL_CALLER</td><td>一个内核层的进程或驱动程序错误地试图进入内存操作.  通常是驱动程序或存在BUG的软件造成的.</td><td>请参考前面介绍的常规解决方案相关项目进行排除.</td></tr>
+</tbody>
+</table>
+</div>
+<p>5.1.2 <strong>死机：</strong></p>
+<p>a.  任务栏卡死：Ctrl+Alt+Delete后选择任务管理器，在进程中选中Windows资源管理器，右键重启即可</p>
+<p>b.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image008.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image008.gif" alt="img"></span></label></p>
+<p>c.   同时开太多程序或程序卡死：同时运转太多程序，可能会造成内存、CPU占用高，从而导致电脑卡顿。也可能是流氓软件（详见iii）强制运行占用资源。</p>
+<p>i.    同样打开任务管理器，选中卡死的软件强制重启。或选择管理器中“性能”选项，点击下方“资源监视器”，即可看到各程序占用情况。</p>
+<p>ii.  温馨提醒：如果任务管理器也卡死，可以长按电源再来一遍（可能造成数据丢失）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image010.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image010.gif" alt="img"></span></label></p>
+<p>iii. 软件不兼容：有时候同学们抱怨游戏打一半死机，或者电脑用一半卡住，可能是使用的软件与电脑的软硬件产生冲突或不兼容。特别是某些吃配置的软件，如大型游戏、渲染或建模软件等。这是可以去网上获取对应软件的配置要求。</p>
+<p>d.  电脑基本无响应，卡死：一般情况只能强制重启找原因，但可能造成数据丢失。</p>
+<p>i.  电脑积灰，让硬件部王凯清灰即可</p>
+<p>ii.  硬件问题，如内存没插稳，可跑程序测试。CPU温度过高，一般伴有蓝瓶钙等症状。确认问题可以检查超频、散热风扇和硅脂损耗等，如有问题，让硬件部王凯修理即可</p>
+<p>iii. C盘空间不足。右键选中C盘，点击属性，点击磁盘清理；或使用相关软件清理。</p>
+<p>e.  电脑中病毒了：使用杀毒软件即可</p>
+<p>f.  有时电脑睡眠息屏后按键盘鼠标无法唤醒，关机键也无响应，一般需强制重启。</p>
+<p>i.  1.检查电脑内存，内存不足也会导致无法正常唤醒</p>
+<ol>
+<li>2.禁用快速启动功能：快速启动的运行原理主要是利用了系统休眠技术和引导程序优化。具体来说，当用户使用快速启动时，Win10系统将会把当前的系统状态保存到硬盘中，然后在下次启动时，系统会从硬盘中恢复这些状态，而不是完全重新启动。通过这种方式，Win10系统可以显著缩短启动时间，提高启动效率和速度。</li>
+</ol>
+<p>a. 然鹅这么做有时会引发一些奇怪的问题，如无法关机，可以尝试禁用来解决问题。</p>
+<p>ii.  按下Win + X键，选择“电源选项”，点击其他电源设置</p>
+<p>iii. 在电源选项中，点击“选择电源按钮的功能”</p>
+<p>iv. 点击“更改当前不可用选项”</p>
+<p>v.  在关机设置下，取消选中“启用快速启动（推荐）”选项</p>
+<p>vi. 点击“保存更改”按钮</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image012.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image012.gif" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="安装软件_adobe_office"><a href="#安装软件_adobe_office" class="header">安装软件_Adobe_Office</a></h1>
+<p><strong>安装软件</strong>**(Adobe,Office)**</p>
+<ol>
+<li>安装Adobe：</li>
+</ol>
+<p>a.  进入网址：https://www.nite07.com/adobe/（本途径安装的Adobe软件仅供学习使用，如有版权需要，可选择官网下载付费激活https://www.adobe.com/cn/）</p>
+<p>b.  选择对应Adobe软件进行安装</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image002-1712303949484-1.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image002-1712303949484-1.gif" alt="img"></span></label></p>
+<p>c.  下载好iso文件后直接解压，双击运行autoplay程序即可安装</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image004-1712303949485-2.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image004-1712303949485-2.gif" alt="img"></span></label></p>
+<p>d.  安装后无需激活即可使用（再次声明，本途径安装的Adobe软件仅供学习使用，如有版权需要，可选择官网下载付费激活https://www.adobe.com/cn/）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image006-1712303949485-3.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image006-1712303949485-3.gif" alt="img"></span></label></p>
+<p>2.安装Ofice:</p>
+<p>a.进入网址： <a href="https://otp.landian.vip/zh-cn/">Office Tools Plus</a> 下载Office安装工具
+//如果财力足够或版权需要请前往 <a href="系统/www.office.com">Office官网</a> 购买正版</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/index.png" alt="image"><span class="img-wrapper"><img src="系统/assets/index.png" alt="image"></span></label></p>
+<p>b.<strong>解压</strong> 下载的文件，打开Office Tools Plus.exe 选择 一键部署 的 2021批量许可证</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/officetools.png" alt="image"><span class="img-wrapper"><img src="系统/assets/officetools.png" alt="image"></span></label></p>
+<p>c.前往部署页面，建议只选择 PowerPoint Excel Word 三件套。如有额外需要自行勾选。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/setup.png" alt="image"><span class="img-wrapper"><img src="系统/assets/setup.png" alt="image"></span></label></p>
+<p>d.点击开始部署待程序安装完成后激活Office即可使用. <a href="https://github.com/liyang8246/pcywwxzx-doc/blob/master/src/%E7%B3%BB%E7%BB%9F/%E6%BF%80%E6%B4%BB%E7%B3%BB%E7%BB%9F_Office.md">点击前往查看激活教程</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="卸载流氓软件"><a href="#卸载流氓软件" class="header">卸载流氓软件</a></h1>
+<p><strong>卸载流氓软件</strong></p>
+<ol>
+<li>来源：流氓软件不会无缘无故进入电脑，最主要的原因就是软件捆绑。如果只是在安装程序里把附带软件取消勾选是毫无作用的，如果是真的流氓，是不会问你“我可以进来吗”的。一般下软件最好去官网或者可以信任的渠道下载（因此目前我的电脑还没看见过敢明着出来的流氓软件）</li>
+<li>Geek清理软件：</li>
+</ol>
+<p>a.  面对赖着不走的流氓软件，可以用Geek进行清理，作为微软自家软件，他可以清除注册表等残留。</p>
+<p>b.  进入 https://geekuninstaller.com/ ，点击右上角下载，选择免费版本进行下载</p>
+<p>c.  运行Geek，查找流氓软件，选中后右键，即可进行一系列操作。若卸载无效，强制删除包治百病</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/geek.png" alt="img"><span class="img-wrapper"><img src="系统/assets/geek.png" alt="img"></span></label></p>
+<ol start="3">
+<li>备选软件：Ccleaner 网址 https://www.ccleaner.com/zh-cn选择免费版下载安装即可，具体使用和国内某杀毒软件类似，主要是纯净强效。（上文也有）</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="激活系统_office"><a href="#激活系统_office" class="header">激活系统_Office</a></h1>
+<p><strong>激活系统</strong>**/Office**</p>
+<p>激活系统</p>
+<p>方式一</p>
+<p>使用神龙KMS进行激活（有时会被电脑杀毒软件误删，具体操作见下文）</p>
+<p>网址：http://www.yishimei.cn/network/319.html 该网址内讲述了使用方法。</p>
+<p>若上述网址失效，以下为该网址内容转载：</p>
+<p>DragonKMS下载地址1：https://wwod.lanzout.com/ix9Bo1c8yhpi</p>
+<p>DragonKMS下载地址2：https://pan.baidu.com/s/1te0e12CBehHYsW61Vsw4QA?pwd=8888</p>
+<p>若下载地址也失效，可以去义修群里要</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image002-1712303985528-2.jpg" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image002-1712303985528-2.jpg" alt="img"></span></label></p>
+<p>关闭Windows Defender步骤：</p>
+<p>打开设置，选择“更新和安全”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image004-1712303985528-1.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image004-1712303985528-1.gif" alt="img"></span></label></p>
+<p>然后选择“Windows安全中心”，点击“病毒和威胁防护”。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image006-1712303985528-3.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image006-1712303985528-3.gif" alt="img"></span></label></p>
+<p>点击管理设置，将右侧的“实时保护”、“云提供保护”、“自动提交样本”、“篡改保护”四项全部手动关掉</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image008-1712303985528-4.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image008-1712303985528-4.gif" alt="img"></span></label></p>
+<p>激活Office</p>
+<p>下载软件：详见ii中Office Tool Plus的下载</p>
+<p>激活：进入软件，点击左侧激活界面，在许可证管理一栏点击小箭头下拉菜单，点击安装许可证的安装按钮</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image010-1712303985528-5.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image010-1712303985528-5.gif" alt="img"></span></label></p>
+<p>选择与系统安装的Office版本吻合的批量许可证（Microsoft 365版本要选择office mondo 2016批量许可证）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image012-1712303985528-6.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image012-1712303985528-6.gif" alt="img"></span></label></p>
+<p>点击确定后，在下方找到KMS管理一栏，点开下拉菜单，输入“kms.03k.org”后，点击设置主机</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/clip_image014.gif" alt="img"><span class="img-wrapper"><img src="系统/assets/clip_image014.gif" alt="img"></span></label></p>
+<p>待右下角出现成功信息后，点击最上方激活按钮，静候佳音。若有错误代码，请检查许可证版本是否对应、KMS主机是否设置正确。成功后，进入任意Office软件，可以看到已经激活成功。</p>
+<p>方式二</p>
+<p>使用Microsoft数字权利激活方式激活(激活程序同样可被杀毒软件误删，激活前请进行相应预防工作)</p>
+<p>此方法将欺骗性的硬件ID发给Microsoft以获取授权许可，在硬件发生更改的情况下将会失效</p>
+<p>这里以云萌激活工具作为展示</p>
+<p>下载地址:https://cmwtat.cloudmoe.com/cn.html?lengmao</p>
+<p>此为激活工具的界面</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="系统/assets/yunmeng.png" alt="img"><span class="img-wrapper"><img src="系统/assets/yunmeng.png" alt="img"></span></label></p>
+<p>先择对应操作系统激活即可</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="驱动"><a href="#驱动" class="header">驱动</a></h1>
+<p><strong>常见驱动问题体现</strong></p>
+<ol>
+<li>1、电脑无法连接网络或显示网络异常.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image002.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image002.jpg" alt="img"></span></label></p>
+<ol start="2">
+<li>2、电脑无法识别网卡或显示网卡缺少驱动.</li>
+<li>3、电脑网速慢或不稳定.</li>
+<li>4、计算机无法正常开机，表现为主机运行，但是屏幕处于黑暗状态.</li>
+<li>5、显示画面怪异，分辨率不正常，造成图像模糊或扭曲.</li>
+<li>6、Windows系统运行起来会感觉明显卡机，但不会死机.</li>
+<li>7、玩游戏的时候卡顿或无法进入游戏.</li>
+<li>8、运行PS或视频处理软件时会出现运行超级慢的感觉.</li>
+<li>9、有可能会出现莫名其妙的系统蓝屏事件.</li>
+<li>10、会导致显示设置不正确或参数无法调整.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image004.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image004.jpg" alt="img"></span></label></p>
+<ol start="11">
+<li>11、计算机没有声音.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="安装_卸载网卡驱动"><a href="#安装_卸载网卡驱动" class="header">安装_卸载网卡驱动</a></h1>
+<p><strong>安装</strong>**/**<strong>卸载网卡驱动</strong></p>
+<ol>
+<li>1、安装网卡驱动：</li>
+<li>如果安装网卡驱动前没网，这时我们可以利用手机和一条该手机的充电线，在确保手机联网的状态下，用充电线把手机与电脑连接起来，如图.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image002-1712304020359-1.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image002-1712304020359-1.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image004-1712304020359-2.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image004-1712304020359-2.jpg" alt="img"></span></label></p>
+<ol start="3">
+<li>打开手机设置，点击类似”连接与共享“的字样，然后点击个人热点，并打开USB网络共享，就成功了.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image006.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image006.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image008.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image008.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image010.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image010.jpg" alt="img"></span></label></p>
+<ol start="4">
+<li>然后打开百度搜索你的电脑品牌并进入官网.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image012.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image012.jpg" alt="img"></span></label></p>
+<ol start="5">
+<li>找到服务支持并点击然后点击下载中心.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image014.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image014.jpg" alt="img"></span></label></p>
+<ol start="6">
+<li>输入你的产品型号，并点击”驱动程序和工具软件“.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image016.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image016.jpg" alt="img"></span></label></p>
+<ol start="7">
+<li>选择你的系统版本.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image018.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image018.jpg" alt="img"></span></label></p>
+<ol start="8">
+<li>点击下载无线网络驱动程序，然后等几分钟，就可以在设备管理器找到网络适配器找到下载的驱动了</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image020.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image020.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image022.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image022.jpg" alt="img"></span></label></p>
+<ol start="9">
+<li>2、卸载网卡驱动：</li>
+<li>找到此电脑右键，找到管理并点进去.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image024.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image024.jpg" alt="img"></span></label></p>
+<ol start="11">
+<li>在系统工具里找到设备管理器，点进去，然后找到网络适配器.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image026.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image026.jpg" alt="img"></span></label></p>
+<ol start="12">
+<li>在网络适配器中找到已安装的网卡驱动然后右键，就能找到“卸载设备”，点击便能卸载网卡驱动.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image028.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image028.jpg" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="安装_卸载显卡驱动"><a href="#安装_卸载显卡驱动" class="header">安装_卸载显卡驱动</a></h1>
+<p><strong>安装</strong>**/**<strong>卸载显卡驱动</strong></p>
+<ol>
+<li>1、安装显卡驱动（以英伟达为例）：</li>
+<li>首先，找到此电脑右键点开属性，查看自己的系统版本</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image002-1712304037120-2.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image002-1712304037120-2.jpg" alt="img"></span></label></p>
+<ol start="3">
+<li>然后去浏览器输入网址www.nvidia.cn,然后点击右上角驱动程序</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image004-1712304037119-1.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image004-1712304037119-1.jpg" alt="img"></span></label></p>
+<ol start="4">
+<li>输入显卡的产品型号等信息，然后就有对应的驱动可以下载，</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image006-1712304037120-3.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image006-1712304037120-3.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image008-1712304037120-4.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image008-1712304037120-4.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image010-1712304037120-5.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image010-1712304037120-5.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image012-1712304037120-6.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image012-1712304037120-6.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image014-1712304037120-7.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image014-1712304037120-7.jpg" alt="img"></span></label></p>
+<ol start="5">
+<li>选择自定义，然后下一步.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image016-1712304037120-8.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image016-1712304037120-8.jpg" alt="img"></span></label></p>
+<ol start="6">
+<li>选择执行清洁安装，系统就会帮你删除上一个版本的驱动，点击下一步就能安装咯.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image018-1712304037120-9.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image018-1712304037120-9.jpg" alt="img"></span></label></p>
+<ol start="7">
+<li>2、卸载显卡驱动：</li>
+<li>首先下载DDU软件并解压.</li>
+<li>然后进入安全模式：win+R之后在窗口输入msconfig.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image020-1712304037120-10.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image020-1712304037120-10.jpg" alt="img"></span></label></p>
+<p>a.  点击引导，把安全引导前面的勾打上，然后点击确定.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image022-1712304037120-11.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image022-1712304037120-11.jpg" alt="img"></span></label></p>
+<p>b.  然后点击重新启动.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image024-1712304037120-12.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image024-1712304037120-12.jpg" alt="img"></span></label></p>
+<p>c.  重启完后，电脑进入安全模式，这时我们打开DDU，然后选择显卡和你的显卡品牌，然后点击清除并重启.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image026-1712304037120-13.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image026-1712304037120-13.jpg" alt="img"></span></label></p>
+<p>d.  在电脑清除的时候，也就是重启前，我们要先进入win+R之后在窗口输入msconfig，然后关闭安全模式之后先点击应用再点击确定.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image028-1712304037120-14.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image028-1712304037120-14.jpg" alt="img"></span></label></p>
+<p>e.  然后点击退出而不重新启动，等电脑卸载就好了.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image030.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image030.jpg" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="安装_卸载声卡驱动"><a href="#安装_卸载声卡驱动" class="header">安装_卸载声卡驱动</a></h1>
+<p><strong>安装</strong>**/**<strong>卸载声卡驱动</strong></p>
+<ol>
+<li>1、卸载声卡驱动：</li>
+</ol>
+<p>a.  首先鼠标右键单击桌面此电脑，选择属性然后点击设备管理器.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image002-1712304050251-1.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image002-1712304050251-1.jpg" alt="img"></span></label></p>
+<p>b.  点击声音视频和游戏控制器，右键点击Realtek，选择卸载设备，但先别重启.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image004-1712304050251-2.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image004-1712304050251-2.jpg" alt="img"></span></label></p>
+<p>i.  打开控制面板，点击卸载程序.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image006-1712304050251-3.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image006-1712304050251-3.jpg" alt="img"></span></label></p>
+<p>ii.  找到Realtek开头的，然后右键点击它然后点击卸载 ，卸载后要拔掉网线.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image008-1712304050251-4.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image008-1712304050251-4.jpg" alt="img"></span></label></p>
+<p>iii. 卸载完看看有没有卸干净没有要继续卸，卸完后拔掉网线重启，卸干净后再把网线插上.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image010-1712304050251-6.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image010-1712304050251-6.jpg" alt="img"></span></label></p>
+<p>iv. 2、安装声卡驱动：</p>
+<p>v.  进入该品牌的官网搜索对应的声卡驱动，然后下载这个驱动程序的安装包。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image012-1712304050251-5.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image012-1712304050251-5.jpg" alt="img"></span></label></p>
+<ol>
+<li>点击安装包然后打双击如图的图标，安装，然后重启之后就好咯.</li>
+</ol>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image014-1712304050251-7.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image014-1712304050251-7.jpg" alt="img"></span></label></p>
+<p>vi.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="如何下载驱动"><a href="#如何下载驱动" class="header">如何下载驱动</a></h1>
+<p><strong>如何下载驱动</strong></p>
+<p>1、在浏览器找到品牌官网（以联想为例）.</p>
+<p>2、找到服务与支持把鼠标移到那，然后选择驱动下载.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image002-1712304063952-1.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image002-1712304063952-1.jpg" alt="img"></span></label></p>
+<p>3、在驱动下载界面，输入主机型号.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image004-1712304063952-2.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image004-1712304063952-2.jpg" alt="img"></span></label></p>
+<p>如何选择要下载的驱动下载就可以了.</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="驱动/assets/clip_image006-1712304063952-3.jpg" alt="img"><span class="img-wrapper"><img src="驱动/assets/clip_image006-1712304063952-3.jpg" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pe系统"><a href="#pe系统" class="header">PE系统</a></h1>
+<p><strong>常见的<strong><strong>PE</strong></strong>系统</strong></p>
+<p>1.微PE</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/微PE截图.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/微PE截图.png" alt="img"></span></label></p>
+<p>2.优启通</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/优启通截图.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/优启通截图.png" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="制作pe启动盘"><a href="#制作pe启动盘" class="header">制作PE启动盘</a></h1>
+<p><strong>制作<strong><strong>PE</strong></strong>启动盘</strong></p>
+<p>首先进入微PE官网（<a href="https://link.zhihu.com/?target=http%3A//www.wepe.com.cn/">http://www.wepe.com.cn</a>）下载微PE</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/新PE下载.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/新PE下载.png" alt="img"></span></label></p>
+<p>2.打开下载好的软件，软件默认名字是wepe_64.exe，如图所示，</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/微PE截图2.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/微PE截图2.jpg" alt="img"></span></label></p>
+<p>3.打开以后，我们选择安装PE到U盘</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/微PE截图3.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/微PE截图3.jpg" alt="img"></span></label></p>
+<p>​    4.把之前准备的U盘插入电脑，制作PE需要格式化U盘，重要资料请先备份。检查U盘是否为刚才插入的U盘，如果没有识别到可点后面的刷新，U盘格式可选NTFS，老电脑比如2017年以前的配置，格式化选择FAT（此格式无法拷贝大于4G的文件），防止主板不识别U盘，其他参数默认不变</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/微PE截图4.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/微PE截图4.jpg" alt="img"></span></label></p>
+<p>​      5.参数设置好以后，我们点击立即安装进U盘，开始制作，在37%的时候进度条会停顿不加载，这是正常现象。（友情提示：制作时请关闭火绒、360等软件）。稍等片刻就会制作完成，然后点击完成安装。(制作时间与U盘读取速度成正比）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/微PE截图5.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/微PE截图5.png" alt="img"></span></label></p>
+<p>​      6.至此PE启动盘制作完成了，那我们如何进入PE呢？无论您是想装系统、拯救文件还是破解密码等，您要做的第一步就是从U盘启动进入PE系统。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ventoy制作启动u盘-1"><a href="#ventoy制作启动u盘-1" class="header">Ventoy制作启动U盘</a></h1>
+<h2 id="ventoy制作启动u盘"><a class="header" href="#ventoy制作启动u盘">Ventoy制作启动U盘</a></h2>
+<p>一个 U 盘往往只能制作成一个系统的启动盘/安装盘，想要增加另一款系统，只能得重新刻录一遍，每次都要格式化超花时间。而最近发现了一款“多合一启动盘”的制作工具 Ventoy，简单到拷贝个 ISO 文件进去就能用，堪称新一代的装机必备神器……</p>
+<p>ventoy使用教程：</p>
+<p>1、首先我们下载ventoy。【点击下载】 https://ventoy.net/cn/doc_start.html</p>
+<p>2、下载完成会得到一个压缩包，将它解压出来。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/2.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/2.png" alt="img"></span></label></p>
+<p>3、解压完成后，双击运行“ventoy2disk.exe”打开它。</p>
+<p>4、在上方选择我们想要制作成系统盘的u盘。（如果没有说明没插u盘）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/4.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/4.png" alt="img"></span></label></p>
+<p>5、接着点击图示位置修改配置版本。</p>
+<p>（基本新电脑和系统都设置gpt就可以了）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/5.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/5.png" alt="img"></span></label></p>
+<p>6、设置完成后，点击“安装”就能完成系统盘的制作了。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/6.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/6.png" alt="img"></span></label></p>
+<p>7、这时候我们就能使用u盘启动电脑了。</p>
+<p>8、如果要重装系统，那么只要下载想安装的系统镜像，将他放到u盘里就可以了。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/8.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/8.png" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="重装系统"><a href="#重装系统" class="header">重装系统</a></h1>
+<p><strong>重装系统</strong></p>
+<p>1.插入制作好的装机u盘（台式机记得插在主板的USB接口上）如未制作装机u盘，请参考 <a href="PE系统/PE系统/下载系统镜像.html">下载系统镜像</a></p>
+<p>2.进入BIOS将第一启动项改为UEFI引导的U盘（大概长下面这样）保存设置后离开BIOS，届时电脑会自动重启    <a href="PE系统/常见BIOS操作/进出BIOS.html">如何进出BIOS</a></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/UEFI.png" alt="img"><span class="img-wrapper"><img src="PE系统/assets/UEFI.png" alt="img"></span></label></p>
+<p>3.选择“我没有产品密钥”</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image002.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image002.gif" alt="img"></span></label></p>
+<p>4.选择windows的版本</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image004-1712304125880-1.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image004-1712304125880-1.gif" alt="img"></span></label></p>
+<p>5.如果是安装windows 11系统，可能会出现下面的情况（原因可能是电脑没有开启或不支持TPM2。0,又或者是没有达到官方windows 11的硬件安装要求）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image006.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image006.gif" alt="img"></span></label></p>
+<p>解决方法如下</p>
+<p><strong>[<strong><strong>官方原版</strong></strong>win10_win11****系统安装教程</strong> <strong>【适用于新老电脑】【</strong> <strong>无视<strong><strong>TPM CPU</strong></strong>限制】重装系统教程</strong>**_<strong><strong>哔哩哔哩</strong></strong>_bilibili - 360****安全浏览器** <strong>15.1 2023-10-22 19-53-46.mp4]</strong></p>
+<p>6.然后选择自定义安装类型</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image008.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image008.gif" alt="img"></span></label></p>
+<p>若是使用的全新的硬盘则会显示下图</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image010.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image010.gif" alt="img"></span></label></p>
+<p>若是该硬盘以前存在系统，则会显示很多分区，只要把这些分区都删除就好了，然后再重建一个C盘来装系统</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image012.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image012.gif" alt="img"></span></label></p>
+<p>5.完成操作后就会出现下图的情况，分区1和2为系统保留分区，不用管它，然后3则为我们的主分区，也就是C盘，未分配的空间等我们进入系统之后再分配就好了，这里只用选择分区3然后在点击下一页，接着系统就安装成功了</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image014.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image014.gif" alt="img"></span></label></p>
+<p>全新安装系统</p>
+<p>1.下载WIN10(最新版1909)的写入工具，下载完的文件叫Media Creation Tool+版本号.exe，打开运行：</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image016.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image016.jpg" alt="img"></span></label></p>
+<p>2.选择写到U盘里面</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image018.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image018.jpg" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image020.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image020.gif" alt="img"></span></label></p>
+<p>4.重启电脑之后，会读取8G U盘进行启动，界面如下：</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image022.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image022.jpg" alt="img"></span></label></p>
+<p>5.因为没有密钥，可以选择下面小蓝字“我没有产品密钥”（等待系统装完之后，可以填写秘钥激活系统），直接下一步：</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image024.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image024.jpg" alt="img"></span></label></p>
+<p>6.操作系统选择，可以选择家庭版或者专业版（我都用专业版），然后进入安装选项，如果是老电脑会显示升级，我们直接选择自定义全新安装：</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image026.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image026.jpg" alt="img"></span></label></p>
+<p>7.由于我们电脑的硬盘全新的没有分区，点击“新建”，如果你硬盘比较大，建议给C盘做个100G的，当然30/50G也可以用</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image028.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image028.jpg" alt="img"></span></label></p>
+<p>8.选择我们目标分区（没有分完的等系统装完慢慢分），点击确定开始安装</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/选盘安装.jpg" alt="img"><span class="img-wrapper"><img src="PE系统/assets/选盘安装.jpg" alt="img"></span></label></p>
+<p>9.系统装完之后，拔掉U盘重启（后续也可以设置U盘为次启动盘）</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="修复引导"><a href="#修复引导" class="header">修复引导</a></h1>
+<p><strong>修复引导</strong></p>
+<p>1.下载DiskGenius软件</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image002-1712304142023-1.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image002-1712304142023-1.gif" alt="img"></span></label></p>
+<p>2.选择ESP（0）</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image004-1712304142024-2.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image004-1712304142024-2.gif" alt="img"></span></label></p>
+<p>3.然后点击“浏览文件”，然后打开EFI文件夹</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image006-1712304142024-3.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image006-1712304142024-3.gif" alt="img"></span></label></p>
+<p>4.接着选择工具，点击“设置UEFI BIOS“启动项</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image008-1712304142024-4.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image008-1712304142024-4.gif" alt="img"></span></label></p>
+<p>5.点击添加</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image010-1712304142024-5.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image010-1712304142024-5.gif" alt="img"></span></label></p>
+<p>6.选择ESP（0）分区</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image012-1712304142024-6.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image012-1712304142024-6.gif" alt="img"></span></label></p>
+<p>7.打开EFI文件</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image014-1712304142024-7.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image014-1712304142024-7.gif" alt="img"></span></label></p>
+<p>8.找到refind文件并打开</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image016.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image016.gif" alt="img"></span></label></p>
+<p>9.打开refind_x64.efi文件</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image018.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image018.gif" alt="img"></span></label></p>
+<p>10.随便设置一个名字，并将其上移到顶端</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image020-1712304142024-8.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image020-1712304142024-8.gif" alt="img"></span></label></p>
+<p>11.然后保存</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image022.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image022.gif" alt="img"></span></label></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="下载系统镜像"><a href="#下载系统镜像" class="header">下载系统镜像</a></h1>
+<p><strong>下载系统镜像</strong></p>
+<p>1.win10下载官网：https://www.microsoft.com/zh-cn/software-download/windows10
+win11下载官网：https://www.microsoft.com/zh-cn/software-download/windows11</p>
+<p>2.点击立即下载工具</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image002-1712304152181-1.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image002-1712304152181-1.gif" alt="img"></span></label></p>
+<p>3.打开下载好的exe文件</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image004-1712304152181-2.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image004-1712304152181-2.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image006-1712304152181-3.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image006-1712304152181-3.gif" alt="img"></span></label></p>
+<p>4.选择第2项，为另一台电脑创建安装介质</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image008-1712304152181-5.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image008-1712304152181-5.gif" alt="img"></span></label></p>
+<p>5.可根据需求修改自己想要的版本</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image010-1712304152181-4.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image010-1712304152181-4.gif" alt="img"></span></label></p>
+<p>6.选择ISO文件，点击下一步，选择下载路径</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image012-1712304152181-6.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image012-1712304152181-6.gif" alt="img"></span></label></p>
+<p>7.选择下载的路径后，自动跳转下载如下图所示，速度有点慢，需耐心等待</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image014-1712304152181-7.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image014-1712304152181-7.gif" alt="img"></span></label></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="PE系统/assets/clip_image016-1712304152181-8.gif" alt="img"><span class="img-wrapper"><img src="PE系统/assets/clip_image016-1712304152181-8.gif" alt="img"></span></label></p>
+<p>8.打开之后就可以看到下载好的文件</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
